@@ -293,24 +293,24 @@
   padding: 20px 30px;
   background: linear-gradient(
     135deg,
-    rgba(250, 239, 221, 0.95),
-    rgba(254, 254, 254, 0.9),
-    rgba(255, 239, 214, 0.95)
+    rgba(77, 94, 85, 0.15),
+    rgba(61, 70, 65, 0.08),
+    rgba(52, 62, 57, 0.12)
   );
   backdrop-filter: blur(20px);
-  border: 1.5px solid rgba(180, 180, 180, 0.4);
+  border: 1.5px solid rgba(77, 94, 85, 0.25);
   border-radius: 25px;
   font-family: 'Heebo', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #4a4a4a;
+  color: rgba(45, 55, 50, 0.9);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 4px 16px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 4px 16px rgba(45, 55, 50, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .ctaButton::before {
@@ -323,7 +323,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.6),
+    rgba(77, 94, 85, 0.15),
     transparent
   );
   transition: left 0.5s ease;
@@ -335,11 +335,17 @@
 
 .ctaButton:hover {
   transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    rgba(77, 94, 85, 0.25),
+    rgba(61, 70, 65, 0.15),
+    rgba(52, 62, 57, 0.2)
+  );
   box-shadow: 
-    0 8px 24px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(160, 160, 160, 0.5);
-  color: #2d2d2d;
+    0 8px 24px rgba(45, 55, 50, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(77, 94, 85, 0.4);
+  color: rgba(45, 55, 50, 1);
 }
 
 .buttonIcon {

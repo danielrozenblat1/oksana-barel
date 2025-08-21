@@ -1,31 +1,193 @@
+/* Base styles - for screens under 350px */
 .description {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: "AssistantR";
     text-align: center;
     margin: 1% auto;
     direction: rtl;
-
-    width: 90%;
+    width: 95%;
 }
+
 .imageContainer {
-   width: 30%;
-   margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
-   width: 100%;
-   height: auto;
-   object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
+
 .title {
-   font-family: 'Assistant';
-   font-size: 2.5rem;
+    font-family: 'Assistant';
+    font-size: 1.8rem;
+    direction: rtl;
+    margin: 2% auto;
+    text-align: center;
+}
 
-   direction: rtl;
+/* 350-450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    .description {
+        font-size: 1.15rem;
+ 
+        width: 92%;
+    }
+    
+    .imageContainer {
+        width: 90%;
+             margin:3% auto;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+}
 
-   margin: 2% auto;
-   text-align: center;
+/* 450-550px */
+@media screen and (min-width: 450px) and (max-width: 550px) {
+    .description {
+        font-size: 1.35rem;
+        width: 90%;
+    }
+    
+    .imageContainer {
+        width: 80%;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+/* 550-650px */
+@media screen and (min-width: 550px) and (max-width: 650px) {
+    .description {
+        font-size: 1.4rem;
+        width: 88%;
+    }
+    
+    .imageContainer {
+        width: 70%;
+    }
+    
+    .title {
+        font-size: 2.3rem;
+    }
+}
+
+/* 650-750px */
+@media screen and (min-width: 650px) and (max-width: 750px) {
+    .description {
+        font-size: 1.4rem;
+        width: 85%;
+    }
+    
+    .imageContainer {
+        width: 60%;
+    }
+    
+    .title {
+        font-size: 2.4rem;
+    }
+}
+
+/* 750-850px */
+@media screen and (min-width: 750px) and (max-width: 850px) {
+    .description {
+        font-size: 1.4rem;
+        width: 82%;
+    }
+    
+    .imageContainer {
+        width: 50%;
+    }
+    
+    .title {
+        font-size: 2.45rem;
+    }
+}
+
+/* 850-950px */
+@media screen and (min-width: 850px) and (max-width: 950px) {
+    .description {
+        font-size: 1.4rem;
+        width: 80%;
+    }
+    
+    .imageContainer {
+        width: 45%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* 950-1050px */
+@media screen and (min-width: 950px) and (max-width: 1050px) {
+    .description {
+        font-size: 1.4rem;
+        width: 78%;
+    }
+    
+    .imageContainer {
+        width: 40%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* 1050-1150px */
+@media screen and (min-width: 1050px) and (max-width: 1150px) {
+    .description {
+        font-size: 1.4rem;
+        width: 75%;
+    }
+    
+    .imageContainer {
+        width: 35%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* 1150-1250px */
+@media screen and (min-width: 1150px) and (max-width: 1250px) {
+    .description {
+        font-size: 1.4rem;
+        width: 72%;
+    }
+    
+    .imageContainer {
+        width: 32%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Above 1250px */
+@media screen and (min-width: 1250px) {
+    .description {
+        font-size: 1.4rem;
+        width: 70%;
+    }
+    
+    .imageContainer {
+        width: 30%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
 }

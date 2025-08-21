@@ -40,11 +40,11 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 50% 50%, #18BFC5 0%, transparent 50%),
-    radial-gradient(circle at 45% 45%, #14A8AE 0%, transparent 45%),
-    radial-gradient(circle at 55% 55%, #1CD6DC 0%, transparent 45%),
-    radial-gradient(circle at 45% 55%, #20D4DA 0%, transparent 45%),
-    radial-gradient(circle at 55% 45%, #12969C 0%, transparent 45%);
+    radial-gradient(circle at 50% 50%, #ffffff 0%, transparent 50%),
+    radial-gradient(circle at 45% 45%, #ffffff 0%, transparent 45%),
+    radial-gradient(circle at 55% 55%, #ffffff 0%, transparent 45%),
+    radial-gradient(circle at 45% 55%, #ffffff 0%, transparent 45%),
+    radial-gradient(circle at 55% 45%, #ffffff 0%, transparent 45%);
   mask: radial-gradient(
     circle at 50% 50%,
     transparent 0%,

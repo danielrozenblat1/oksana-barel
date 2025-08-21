@@ -1,7 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Phone, MessageCircle, Users, Stethoscope, Camera } from 'lucide-react';
 import styles from './TreatsMenu.module.css';
-
+import ipurkavuagabot from "../../images/איפור קבוע לגבות ראשית.png"
+import gabot1 from "../../images/איפור קבוע לגבות נוספות 1.png"
+import gabot2 from "../../images/איפור קבוע לגבות נוספות 2.png"
+import gabot3 from "../../images/איפור קבוע לגבות נוספות 3.png"
+import sfataim1 from "../../images/איפור קבוע לשפתיים ראשית.png"
+import lips1 from "../../images/איפור קבוע לשפתיים נוספות 1.png"
+import lips2 from "../../images/איפור קבוע לשפתיים נוספות 2.png"
+import lips3 from "../../images/איפור קבוע לשפתיים נוספות 3.png"
+import acneMain from "../../images/אקנה תמונה ראשית.png"
+import acneMore1 from "../../images/צלקות ואקנה נוספות 1.png"
+import acneMore2 from "../../images/צלקות ואקנה נוספות 2.png"
+import acneMore3 from "../../images/צלקות ואקנה נוספות 3.png"
+import metihaMain from "../../images/אוקסנה סימני מתיחה ראשית.png"
+import mitzuk from "../../images/מיצוק ראשית.png"
+import sirheyOr from "../../images/סרחי עור ראשית.png"
+import ktamim from "../../images/כתמי גיל ראשית.png"
 const TreatmentsCarousel = () => {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -16,7 +31,7 @@ const TreatmentsCarousel = () => {
       name: "איפור קבוע לגבות",
       description: "שיטות מתקדמות: קשמיר, מיקרובליידינג ופודרה",
       suitableFor: "נשים עם גבות דלילות, חוסר סימטריה או חוסר בצורה מוגדרת",
-      image: "/api/placeholder/400/600",
+      image: ipurkavuagabot,
       process: [
         "קבלת תמונה של הפנים להבנת הצורה המתאימה",
         "תמונה קרובה של הגבות הקיימות",
@@ -24,14 +39,14 @@ const TreatmentsCarousel = () => {
         "ביצוע הטיפול בשיטה המתאימה ביותר",
         "הוראות טיפול לאחר הטיפול"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [gabot1, gabot2, gabot3]
     },
     {
       id: 2,
       name: "איפור קבוע לשפתיים",
       description: "החזרת צבע טבעי ותיקון סימטריה",
       suitableFor: "נשים שאיבדו צבע טבעי מהגיל או הזרקות, חוסר סימטריה בשפתיים",
-      image: "/api/placeholder/400/600",
+      image: sfataim1,
       process: [
         "בדיקת מצב השפתיים הנוכחי",
         "בחירת גוון מתאים לגוון העור",
@@ -39,14 +54,14 @@ const TreatmentsCarousel = () => {
         "ביצוע האיפור הקבוע",
         "הוראות טיפול והחלמה"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [lips1, lips2, lips3]
     },
     {
       id: 3,
       name: "טיפול בצלקות ופוסט אקנה",
       description: "טשטוש צלקות בצלקות מאקנה במכשיר RF Fractional",
       suitableFor: "אנשים עם צלקות מאקנה ונזקי עור מאקנה",
-      image: "/api/placeholder/400/600",
+      image:acneMain,
       process: [
         "הערכת מצב העור והצלקות",
         "קביעת מספר הטיפולים הנדרש בסדרה",
@@ -54,14 +69,14 @@ const TreatmentsCarousel = () => {
         "מעקב אחר התקדמות הטיפול",
         "הוראות טיפול ביתי לשמירת התוצאות"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [acneMore1, acneMore2, acneMore3]
     },
     {
       id: 4,
       name: "טיפול בסימני מתיחה",
       description: "טיפול יעיל בסימני מתיחה בבטן, ירכיים וברכיים",
       suitableFor: "אנשים עם סימני מתיחה מהריון, שינויים במשקל או צמיחה",
-      image: "/api/placeholder/400/600",
+      image: metihaMain,
       process: [
         "בדיקת מיקום וחומרת סימני המתיחה",
         "קביעת תוכנית טיפול אישית",
@@ -69,14 +84,14 @@ const TreatmentsCarousel = () => {
         "מעקב אחר שיפור במרקם העור",
         "המלצות לטיפול ביתי תומך"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [metihaMain,]
     },
     {
       id: 5,
-      name: "הידרהפיישל",
+      name: "מיצוק/ היידהפיישיאל",
       description: "ניקוי עמוק עם לחות מיידית לעור חלק ורך",
       suitableFor: "נשים בכל הגילאים המחפשות רענון מיידי ולחות לעור",
-      image: "/api/placeholder/400/600",
+      image:mitzuk,
       process: [
         "ניתוח מצב העור וקביעת סוג הטיפול",
         "ניקוי עמוק עם שאיבת זיהומים",
@@ -91,7 +106,7 @@ const TreatmentsCarousel = () => {
       name: "הסרת סרחי עור",
       description: "הסרה בטוחה ויעילה של סרחי עור וגידולים קטנים",
       suitableFor: "אנשים עם סרחי עור המפריעים אסתטית או פונקציונלית",
-      image: "/api/placeholder/400/600",
+      image: sirheyOr,
       process: [
         "בדיקה וזיהוי של הסרח",
         "בחירת השיטה המתאימה להסרה",
@@ -101,27 +116,13 @@ const TreatmentsCarousel = () => {
       ],
       images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
     },
-    {
-      id: 7,
-      name: "הסרת שיער בלייזר",
-      description: "טיפולי לייזר מתקדמים לגברים ונשים",
-      suitableFor: "גברים ונשים המעוניינים בהסרת שיער יעילה וארוכת טווח",
-      image: "/api/placeholder/400/600",
-      process: [
-        "בדיקת סוג העור והשיער",
-        "קביעת מספר הטיפולים הנדרש",
-        "ביצוע טיפול לייזר בטכנולוגיה מתקדמת",
-        "מעקב והתאמות לפי הצורך",
-        "הוראות טיפול לאחר הטיפול"
-      ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
-    },
+ 
     {
       id: 8,
       name: "הסרת כתמי גיל",
       description: "טיפול יעיל בפעולה אחת כולל הקפאה",
       suitableFor: "אנשים עם כתמי גיל וריכוזי פיגמנטציה",
-      image: "/api/placeholder/400/600",
+      image: ktamim,
       process: [
         "זיהוי וסימון הכתמים לטיפול",
         "ביצוע טיפול הקפאה ממוקד",
@@ -289,8 +290,9 @@ const TreatmentsCarousel = () => {
                       עוד פרטים על הטיפול
                     </button>
                     <button className={styles.contactButton}>
+                       יצירת קשר
                       <Phone size={16} />
-                      יצירת קשר
+                     
                     </button>
                   </div>
                 </div>

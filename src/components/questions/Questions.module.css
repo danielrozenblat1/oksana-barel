@@ -6,8 +6,8 @@
   width: 500px;
   direction: rtl;
   text-decoration: none;
-  background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
-              linear-gradient(135deg, #e8caa7, #d1b387) border-box;
+  background: linear-gradient(rgba(45, 55, 50, 0.95), rgba(45, 55, 50, 0.95)) padding-box,
+              linear-gradient(135deg, rgba(77, 94, 85, 0.8), rgba(61, 70, 65, 0.9)) border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   position: relative;
 }
@@ -20,7 +20,7 @@
   right: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, #e8caa7, #d1b387);
+  background: linear-gradient(180deg, rgba(77, 94, 85, 1), rgba(61, 70, 65, 1));
   border-radius: 0 16px 16px 0;
 }
 
@@ -30,10 +30,10 @@
   align-items: center;
   width: 100%;
   padding: 1rem 1.5rem;
-  background-color: #1a1a1a;
+  background-color: rgba(52, 62, 57, 0.8);
   border: none;
   text-decoration: none;
-  color: #e8caa7;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 50px;
@@ -44,14 +44,14 @@
   font-family: 'AssistantR', sans-serif;
   font-size: 1.15rem;
   text-align: center;
-  color: #e8caa7;
+  color: #ffffff;
   flex-grow: 1;
 }
 
 .iconWrapper {
   width: 28px;
   flex-shrink: 0;
-  color: #e8caa7;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -64,7 +64,7 @@
 .answerContainer {
   overflow: hidden;
   transition: height 0.35s ease, transform 0.3s ease;
-  background-color: #0f0f0f;
+  background-color: rgba(45, 55, 50, 0.95);
   transform: scaleY(0.98);
 }
 
@@ -76,15 +76,16 @@
   font-family: 'AssistantR', sans-serif;
   font-size: 1.05rem;
   padding: 1.2rem;
-  color: #e8caa7;
+  color: #ffffff;
   text-align: center;
   margin: auto;
   line-height: 1.6;
+  opacity: 0.9;
 }
 
 .answerText a,
 .answerText strong {
-  color: #f0d1a1;
+  color: rgba(77, 94, 85, 1);
   font-weight: 600;
 }
 

@@ -8,6 +8,7 @@ import ThirdScreen from './screens/ThirdScreen';
 import SecondScreen from './screens/SecondScreen';
 import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
+import PrivacyPolicy from './privacy/Privacy';
 
 function App() {
   return <>
@@ -19,6 +20,12 @@ function App() {
         <ThirdScreen/>
         <TreatmentsCarousel/>
         <ForthScreen/>
+        <PrivacyPolicy 
+  ownerName="אוקסנה בראל" 
+  email="Okjamesblond@gmail.com" 
+  phone="+972 54-494-8282" 
+  domain="https://oksanabarel.co.il/" 
+/>
         <ByMe/>
   </>
 }
