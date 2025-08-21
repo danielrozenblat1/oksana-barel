@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link as ScrollLink } from "react-scroll";
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './NavBarNew.module.css';
 import logo from "../../images/אוקסנה בראל אייקון.png";
 import { FaTimes } from 'react-icons/fa';
@@ -9,17 +8,43 @@ const NavBarNew = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  // פונקציה לגלילה חלקה משלנו
+  const smoothScrollTo = useCallback((elementId, offset = 0) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset + offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }, []);
+
   useEffect(() => {
+    let timeoutId = null;
+    
     const handleScroll = () => {
-      if (window.scrollY > 200) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
       }
+      
+      timeoutId = setTimeout(() => {
+        const scrollPosition = window.scrollY;
+        setIsVisible(scrollPosition > 200);
+      }, 10); // דחיית הבדיקה ב-10ms לביצועים טובים יותר
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // הוספת האירוע עם passive: true לביצועים טובים יותר
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll, { passive: true });
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -41,11 +66,15 @@ const NavBarNew = () => {
     window.open(url, '_blank');
   };
 
+  const handleMenuItemClick = (elementId, offset) => {
+    smoothScrollTo(elementId, offset);
+    toggleMenu();
+  };
+
   const menuItems = [
-    
-    { name: 'מי אני', to: 'מי אני', offset: -100 },
-    { name: 'מגוון הטיפולים', to: 'מגוון הטיפולים', offset: -100 },
-    { name: 'שאלות נפוצות', to: 'שאלות נפוצות', offset: 0 },
+    { name: 'מי אני', id: 'מי אני', offset: -100 },
+    { name: 'מגוון הטיפולים', id: 'מגוון הטיפולים', offset: -100 },
+    { name: 'שאלות נפוצות', id: 'שאלות נפוצות', offset: 0 },
   ];
 
   return (
@@ -78,26 +107,21 @@ const NavBarNew = () => {
 
           <div className={styles.mobileMenuContent}>
             {menuItems.map((item, index) => (
-              <ScrollLink
+              <button
                 key={index}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={item.offset}
-                duration={500}
-                onClick={toggleMenu}
+                onClick={() => handleMenuItemClick(item.id, item.offset)}
                 className={styles.mobileMenuItem}
               >
                 {item.name}
-              </ScrollLink>
+              </button>
             ))}
 
-            <div
+            <button
               className={styles.mobileMenuItem}
               onClick={openWhatsApp}
             >
               יצירת קשר
-            </div>
+            </button>
 
             <div className={styles.center}>
               <img className={styles.centerLogo} src={logo} alt="אוקסנה בראל לוגו" />

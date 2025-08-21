@@ -3,8 +3,8 @@ import styles from "./Button.module.css";
 
 const Button = (props) => {
   const handleButtonClick = () => {
-    const phoneNumber = "+972532733353";
-    const message =props.message ? props.message: "היי סוזנה ,אני רוצה לשמוע ממך עוד על..";
+    const phoneNumber = "+972544948282";
+    const message =props.message ? props.message: "היי אוקסנה ,אני רוצה לשמוע ממך עוד על..";
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");

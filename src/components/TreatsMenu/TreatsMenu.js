@@ -1,22 +1,30 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Phone, MessageCircle, Users, Stethoscope, Camera } from 'lucide-react';
+import { X, Phone, Users, Stethoscope, Camera } from 'lucide-react';
 import styles from './TreatsMenu.module.css';
-import ipurkavuagabot from "../../images/איפור קבוע לגבות ראשית.png"
-import gabot1 from "../../images/איפור קבוע לגבות נוספות 1.png"
-import gabot2 from "../../images/איפור קבוע לגבות נוספות 2.png"
-import gabot3 from "../../images/איפור קבוע לגבות נוספות 3.png"
-import sfataim1 from "../../images/איפור קבוע לשפתיים ראשית.png"
-import lips1 from "../../images/איפור קבוע לשפתיים נוספות 1.png"
-import lips2 from "../../images/איפור קבוע לשפתיים נוספות 2.png"
-import lips3 from "../../images/איפור קבוע לשפתיים נוספות 3.png"
-import acneMain from "../../images/אקנה תמונה ראשית.png"
-import acneMore1 from "../../images/צלקות ואקנה נוספות 1.png"
-import acneMore2 from "../../images/צלקות ואקנה נוספות 2.png"
-import acneMore3 from "../../images/צלקות ואקנה נוספות 3.png"
-import metihaMain from "../../images/אוקסנה סימני מתיחה ראשית.png"
-import mitzuk from "../../images/מיצוק ראשית.png"
-import sirheyOr from "../../images/סרחי עור ראשית.png"
-import ktamim from "../../images/כתמי גיל ראשית.png"
+import ipurkavuagabot from "../../images/איפור קבוע לגבות ראשית.png";
+import gabot1 from "../../images/איפור קבוע לגבות נוספות 1.png";
+import gabot2 from "../../images/איפור קבוע לגבות נוספות 2.png";
+import gabot3 from "../../images/איפור קבוע לגבות נוספות 3.png";
+import sfataim1 from "../../images/איפור קבוע לשפתיים ראשית.png";
+import lips1 from "../../images/איפור קבוע לשפתיים נוספות 1.png";
+import lips2 from "../../images/איפור קבוע לשפתיים נוספות 2.png";
+import lips3 from "../../images/איפור קבוע לשפתיים נוספות 3.png";
+import acneMain from "../../images/אקנה תמונה ראשית.png";
+import acneMore1 from "../../images/צלקות ואקנה נוספות 1.png";
+import acneMore2 from "../../images/צלקות ואקנה נוספות 2.png";
+import acneMore3 from "../../images/צלקות ואקנה נוספות 3.png";
+import metihaMain from "../../images/אוקסנה סימני מתיחה ראשית.png";
+import mitzuk1 from "../../images/סימני מתיחה נוספות 1.png"
+import mitzuk2 from "../../images/מיצוק נוספות 2.png"
+import mitzuk3 from "../../images/מיצוק נוספות 3.png"
+import mitzuk4 from "../../images/מיצוק נוספות 4.png"
+import mitzuk from "../../images/מיצוק ראשית.png";
+import sirheyOr from "../../images/סרחי עור ראשית.png";
+import ktamim from "../../images/כתמי גיל ראשית.png";
+import gil from "../../images/כתמי גיל נוספות.png"
+import gil1 from "../../images/כתמי גיל נוספות 1.png"
+import gil2 from "../../images/כתמי גיל נוספות 2.png"
+
 const TreatmentsCarousel = () => {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -61,7 +69,7 @@ const TreatmentsCarousel = () => {
       name: "טיפול בצלקות ופוסט אקנה",
       description: "טשטוש צלקות בצלקות מאקנה במכשיר RF Fractional",
       suitableFor: "אנשים עם צלקות מאקנה ונזקי עור מאקנה",
-      image:acneMain,
+      image: acneMain,
       process: [
         "הערכת מצב העור והצלקות",
         "קביעת מספר הטיפולים הנדרש בסדרה",
@@ -84,14 +92,14 @@ const TreatmentsCarousel = () => {
         "מעקב אחר שיפור במרקם העור",
         "המלצות לטיפול ביתי תומך"
       ],
-      images: [metihaMain,]
+      images: [metihaMain]
     },
     {
       id: 5,
       name: "מיצוק/ היידהפיישיאל",
       description: "ניקוי עמוק עם לחות מיידית לעור חלק ורך",
       suitableFor: "נשים בכל הגילאים המחפשות רענון מיידי ולחות לעור",
-      image:mitzuk,
+      image: mitzuk,
       process: [
         "ניתוח מצב העור וקביעת סוג הטיפול",
         "ניקוי עמוק עם שאיבת זיהומים",
@@ -99,7 +107,7 @@ const TreatmentsCarousel = () => {
         "הזרקת סרום לחות מותאם",
         "מריחת הגנה והוראות המשך טיפול"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [mitzuk1,mitzuk2,mitzuk3,mitzuk4]
     },
     {
       id: 6,
@@ -114,9 +122,8 @@ const TreatmentsCarousel = () => {
         "טיפול באזור לאחר ההסרה",
         "מעקב והוראות לריפוי מיטבי"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [sirheyOr]
     },
- 
     {
       id: 8,
       name: "הסרת כתמי גיל",
@@ -130,60 +137,22 @@ const TreatmentsCarousel = () => {
         "בדיקת תוצאות והצורך בטיפול נוסף",
         "הוראות הגנה מקרינה להמשך"
       ],
-      images: ["/api/placeholder/300/200", "/api/placeholder/300/200", "/api/placeholder/300/200"]
+      images: [gil,gil1,gil2]
     }
   ];
 
-  // Create multiple copies for infinite scroll
   const infiniteTreatments = [...treatments, ...treatments, ...treatments, ...treatments, ...treatments];
 
-  // Initialize scroll position to center
   useEffect(() => {
     const carousel = carouselRef.current;
     if (carousel) {
-      const cardWidth = 320; // 300px width + 20px gap
+      const cardWidth = 320;
       const centerPosition = (treatments.length * 2) * cardWidth;
       carousel.scrollLeft = centerPosition;
     }
-  }, [treatments.length]);
+  }, []);
 
-  // Auto-scroll functionality with smooth movement
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-
-    let animationId;
-    const autoScroll = () => {
-      if (isAutoScrolling && !isDragging) {
-        carousel.scrollLeft += 0.5; // Smooth auto-scroll
-        
-        // Check if we need to reset position for infinite effect
-        const cardWidth = 320;
-        const singleSetWidth = treatments.length * cardWidth;
-        const currentScroll = carousel.scrollLeft;
-        
-        // If we've scrolled past 3 sets, reset to the middle
-        if (currentScroll >= singleSetWidth * 3) {
-          carousel.scrollLeft = singleSetWidth * 2;
-        }
-        // If we've scrolled before the first set, jump to the end
-        else if (currentScroll <= singleSetWidth) {
-          carousel.scrollLeft = singleSetWidth * 2;
-        }
-      }
-      animationId = requestAnimationFrame(autoScroll);
-    };
-
-    animationId = requestAnimationFrame(autoScroll);
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, [isAutoScrolling, isDragging, treatments.length]);
-
-  // Mouse drag functionality with smooth transitions
+ 
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setIsAutoScrolling(false);
@@ -194,23 +163,19 @@ const TreatmentsCarousel = () => {
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-    e.preventDefault();
     const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Smooth dragging multiplier
+    const walk = (x - startX) * 1.5;
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    carouselRef.current.style.scrollBehavior = 'smooth';
-    
-    // Resume auto-scroll after a delay
     setTimeout(() => {
+      carouselRef.current.style.scrollBehavior = 'smooth';
       setIsAutoScrolling(true);
-    }, 3000);
+    }, 500);
   };
 
-  // Touch drag functionality
   const handleTouchStart = (e) => {
     setIsDragging(true);
     setIsAutoScrolling(false);
@@ -228,15 +193,12 @@ const TreatmentsCarousel = () => {
 
   const handleTouchEnd = () => {
     setIsDragging(false);
-    carouselRef.current.style.scrollBehavior = 'smooth';
-    
-    // Resume auto-scroll after a delay
     setTimeout(() => {
+      carouselRef.current.style.scrollBehavior = 'smooth';
       setIsAutoScrolling(true);
-    }, 3000);
+    }, 500);
   };
 
-  // Function to get appropriate icon for each section
   const getSectionIcon = (title) => {
     if (title.includes('למי מתאים')) return <Users size={20} color="rgba(255, 223, 140, 0.6)" />;
     if (title.includes('הליך הטיפול')) return <Stethoscope size={20} color="rgba(255, 223, 140, 0.6)" />;
@@ -244,26 +206,27 @@ const TreatmentsCarousel = () => {
     return null;
   };
 
-  const openModal = (treatment) => {
+ const openModal = (treatment) => {
     setSelectedTreatment(treatment);
+    // חסימת גלילה ברקע
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedTreatment(null);
+    // החזרת גלילה לרקע
+    document.body.style.overflow = 'unset';
   };
 
   return (
     <div className={styles.container} id="מגוון הטיפולים">
-      {/* Title */}
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>הטיפולים שלי</h2>
-        {/* <div className={styles.backgroundTitle}>My Treatments</div> */}
       </div>
-
-      {/* Infinite Carousel */}
+  <div className={styles.description}>ריכזתי עבורך את כל הטיפולים שיש לקליניקה שלי להציע לך.  הליקי בין הטיפולים ולחצי על כל טיפול כדי לראות עוד פרטים עליו או ליצור איתי קשר ישירות</div>
       <div className={styles.carouselWrapper}>
         <div
-          className={styles.carousel}
+          className={`${styles.carousel} ${isDragging ? styles.dragging : ''}`}
           ref={carouselRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -283,16 +246,10 @@ const TreatmentsCarousel = () => {
                     <p className={styles.treatmentDescription}>{treatment.description}</p>
                   </div>
                   <div className={styles.buttons}>
-                    <button 
-                      className={styles.infoButton}
-                      onClick={() => openModal(treatment)}
-                    >
-                      עוד פרטים על הטיפול
-                    </button>
+                    <button className={styles.infoButton} onClick={() => openModal(treatment)}>עוד פרטים על הטיפול</button>
                     <button className={styles.contactButton}>
-                       יצירת קשר
+                      יצירת קשר
                       <Phone size={16} />
-                     
                     </button>
                   </div>
                 </div>
@@ -302,30 +259,22 @@ const TreatmentsCarousel = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {selectedTreatment && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={closeModal}>
               <X size={24} />
             </button>
-            
             <div className={styles.modalContent}>
               <h2 className={styles.modalTitle}>{selectedTreatment.name}</h2>
-              
+
               <div className={styles.modalSection}>
-                <h3>
-                  {getSectionIcon('למי מתאים הטיפול')}
-                  למי מתאים הטיפול
-                </h3>
+                <h3>{getSectionIcon('למי מתאים הטיפול')} למי מתאים הטיפול</h3>
                 <p>{selectedTreatment.suitableFor}</p>
               </div>
 
               <div className={styles.modalSection}>
-                <h3>
-                  {getSectionIcon('הליך הטיפול:')}
-                  הליך הטיפול:
-                </h3>
+                <h3>{getSectionIcon('הליך הטיפול:')} הליך הטיפול:</h3>
                 <ul>
                   {selectedTreatment.process.map((step, index) => (
                     <li key={index}>{step}</li>
@@ -334,10 +283,7 @@ const TreatmentsCarousel = () => {
               </div>
 
               <div className={styles.modalSection}>
-                <h3>
-                  {getSectionIcon('תמונות מהטיפול:')}
-                  תמונות מהטיפול:
-                </h3>
+                <h3>{getSectionIcon('תמונות מהטיפול:')} תמונות מהטיפול:</h3>
                 <div className={styles.imageGrid}>
                   {selectedTreatment.images.map((image, index) => (
                     <img key={index} src={image} alt={`${selectedTreatment.name} ${index + 1}`} />
@@ -346,7 +292,7 @@ const TreatmentsCarousel = () => {
               </div>
 
               <div className={styles.modalButtons}>
-              <button
+                <button
                   className={styles.contactModalButton}
                   onClick={() => {
                     const message = `היי אוקסנה, הגעתי דרך הדף שלך, אשמח שנדבר על ${selectedTreatment.name}`;

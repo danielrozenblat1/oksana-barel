@@ -151,13 +151,71 @@
 
 .title {
   font-size: 3rem;
-font-family: "AssistantR";
+  font-family: "AssistantR";
   color: #fafafa;
   margin-bottom: 20px;
-
   position: relative;
   text-shadow: 0 4px 20px rgba(245, 240, 225, 0.15);
   transform: translateY(calc(var(--scroll-progress) * -20px));
+  line-height: 1.2;
+}
+
+.titleLetter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) rotateX(80deg) scale(0.3);
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  transition-delay: var(--letter-delay);
+  filter: blur(8px);
+  position: relative;
+}
+
+.titleLetter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(245, 240, 225, 0.05), transparent);
+  opacity: 0;
+  border-radius: 3px;
+  transition: opacity 0.4s ease;
+}
+
+.title.titleRevealed .titleLetter {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg) scale(1);
+  filter: blur(0px);
+  animation: letterSmoothBounce 1s ease-out;
+  animation-delay: var(--letter-delay);
+  animation-fill-mode: both;
+}
+
+.title.titleRevealed .titleLetter::before {
+  opacity: 0.3;
+}
+
+@keyframes letterSmoothBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) rotateX(80deg) scale(0.3);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-8px) rotateX(-5deg) scale(1.05);
+    filter: blur(1px);
+  }
+  75% {
+    transform: translateY(2px) rotateX(1deg) scale(0.98);
+    filter: blur(0.3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+    filter: blur(0px);
+  }
 }
 
 .title::before {
@@ -195,9 +253,6 @@ font-family: "AssistantR";
 .subtitle {
   font-size: 1.6rem;
   color: #ffffff;
-
-
- 
 }
 
 .servicesContainer {
@@ -291,9 +346,6 @@ font-family: "AssistantR";
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-
-
-
 
 /* סגנון מיוחד לכרטיס מורחב */
 .serviceCard.expanded .cardGlass {
@@ -771,6 +823,10 @@ font-family: "AssistantR";
     margin-bottom: 15px; /* רווח קטן יותר */
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 1.8rem;
+  }
+  
   .titleIcon {
     font-size: 2rem;
     margin-bottom: 15px; /* רווח קטן יותר */
@@ -841,6 +897,10 @@ font-family: "AssistantR";
   .title {
     font-size: 2rem;
     margin-bottom: 16px;
+  }
+  
+  .title.titleRevealed .titleLetter {
+    font-size: 2rem;
   }
   
   .titleIcon {
@@ -915,6 +975,10 @@ font-family: "AssistantR";
     margin-bottom: 18px;
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 2.2rem;
+  }
+  
   .titleIcon {
     font-size: 2.5rem;
     margin-bottom: 18px;
@@ -984,6 +1048,10 @@ font-family: "AssistantR";
     margin-bottom: 20px;
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 2.4rem;
+  }
+  
   .titleIcon {
     font-size: 2.8rem;
     margin-bottom: 20px;
@@ -1046,6 +1114,10 @@ font-family: "AssistantR";
     font-size: 2.6rem;
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 2.6rem;
+  }
+  
   .titleIcon {
     font-size: 3rem;
   }
@@ -1101,6 +1173,10 @@ font-family: "AssistantR";
   }
   
   .title {
+    font-size: 2.8rem;
+  }
+  
+  .title.titleRevealed .titleLetter {
     font-size: 2.8rem;
   }
   
@@ -1170,6 +1246,10 @@ font-family: "AssistantR";
     font-size: 2.9rem;
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 2.9rem;
+  }
+  
   .titleIcon {
     font-size: 3.4rem;
   }
@@ -1233,6 +1313,10 @@ font-family: "AssistantR";
   }
   
   .title {
+    font-size: 3rem;
+  }
+  
+  .title.titleRevealed .titleLetter {
     font-size: 3rem;
   }
   
@@ -1302,6 +1386,10 @@ font-family: "AssistantR";
     font-size: 3rem;
   }
   
+  .title.titleRevealed .titleLetter {
+    font-size: 3rem;
+  }
+  
   .titleIcon {
     font-size: 3.8rem;
   }
@@ -1365,6 +1453,10 @@ font-family: "AssistantR";
   }
   
   .title {
+    font-size: 3rem;
+  }
+  
+  .title.titleRevealed .titleLetter {
     font-size: 3rem;
   }
   

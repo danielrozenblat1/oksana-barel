@@ -10,6 +10,7 @@ import pmu from "../images/איפור קבוע.png"
 import panim from "../images/אקנה ופוסט אקנה 1.png"
 import hairemove from "../images/לייזר להסרת שיער.png"
 import tzalakot from "../images/צלקות.png"
+
 // קומפוננטת כרטיס בודד עם state עצמאי
 const ServiceCard = ({ service, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -87,7 +88,11 @@ const ServiceCard = ({ service, index }) => {
 
 const SecondScreen = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [titleInView, setTitleInView] = useState(false);
   const containerRef = useRef(null);
+  const titleRef = useRef(null);
+
+  const titleText = "הכל במקום אחד";
 
   const services = [
     {
@@ -176,6 +181,17 @@ const SecondScreen = () => {
         const currentProgress = (startScroll - elementTop) / totalScrollDistance;
         
         setScrollProgress(Math.max(0, Math.min(1, currentProgress)));
+        
+        // אפקט הופעת הכותרת - טריגר חד פעמי
+        if (titleRef.current && !titleInView) {
+          const titleRect = titleRef.current.getBoundingClientRect();
+          const titleCenter = titleRect.top + titleRect.height / 2;
+          const triggerPoint = windowHeight * 0.7; // כשהכותרת מגיעה ל-70% מהמסך
+          
+          if (titleCenter < triggerPoint) {
+            setTitleInView(true);
+          }
+        }
       }
     };
 
@@ -185,7 +201,7 @@ const SecondScreen = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [titleInView]);
 
   return (
     <div className={styles.container} ref={containerRef}>
@@ -218,10 +234,26 @@ const SecondScreen = () => {
       
         
         <div 
-          className={styles.title}
+          className={`${styles.title} ${titleInView ? styles.titleRevealed : ''}`}
+          ref={titleRef}
           style={{ '--scroll-progress': scrollProgress }}
         >
-          הכל במקום אחד
+          {titleText.split('').map((letter, index) => {
+            const isSpace = letter === ' ';
+            
+            return (
+              <span
+                key={index}
+                className={styles.titleLetter}
+                style={{ 
+                  '--letter-delay': `${index * 0.06}s`,
+                  '--letter-index': index
+                }}
+              >
+                {isSpace ? '\u00A0' : letter}
+              </span>
+            );
+          })}
         </div>
         
         <div className={styles.titleLine}></div>

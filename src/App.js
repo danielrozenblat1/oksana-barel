@@ -9,6 +9,7 @@ import SecondScreen from './screens/SecondScreen';
 import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import PrivacyPolicy from './privacy/Privacy';
+import Recs from './components/recommends/Recs';
 
 function App() {
   return <>
@@ -19,6 +20,7 @@ function App() {
         <AboutMe/>
         <ThirdScreen/>
         <TreatmentsCarousel/>
+        <Recs/>
         <ForthScreen/>
         <PrivacyPolicy 
   ownerName="אוקסנה בראל" 
