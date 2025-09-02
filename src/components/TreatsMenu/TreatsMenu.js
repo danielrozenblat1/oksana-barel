@@ -5,6 +5,7 @@ import ipurkavuagabot from "../../images/איפור קבוע לגבות ראשי
 import gabot1 from "../../images/איפור קבוע לגבות נוספות 1.png";
 import gabot2 from "../../images/איפור קבוע לגבות נוספות 2.png";
 import gabot3 from "../../images/איפור קבוע לגבות נוספות 3.png";
+import gabot4 from "../../images/אוקסנה בראל תמונה ראשית.png"
 import sfataim1 from "../../images/איפור קבוע לשפתיים ראשית.png";
 import lips1 from "../../images/איפור קבוע לשפתיים נוספות 1.png";
 import lips2 from "../../images/איפור קבוע לשפתיים נוספות 2.png";
@@ -38,29 +39,29 @@ const TreatmentsCarousel = () => {
       id: 1,
       name: "איפור קבוע לגבות",
       description: "שיטות מתקדמות: קשמיר, מיקרובליידינג ופודרה",
-      suitableFor: "נשים עם גבות דלילות, חוסר סימטריה או חוסר בצורה מוגדרת",
+      suitableFor: "נשים עם גבות דלילות, חוסר סימטריה או חוסר בצורה מוגדרת.",
       image: ipurkavuagabot,
       process: [
-        "קבלת תמונה של הפנים להבנת הצורה המתאימה",
-        "תמונה קרובה של הגבות הקיימות",
-        "התאמה אישית של השיטה בהתאם לסוג העור",
-        "ביצוע הטיפול בשיטה המתאימה ביותר",
-        "הוראות טיפול לאחר הטיפול"
+        "קבלת תמונה של הפנים להבנת הצורה המתאימה.",
+        "תמונה קרובה של הגבות הקיימות.",
+        "התאמה אישית של השיטה בהתאם לסוג העור.",
+        "ביצוע הטיפול בשיטה המתאימה ביותר.",
+        "הוראות טיפול לאחר הטיפול."
       ],
-      images: [gabot1, gabot2, gabot3]
+      images: [gabot1, gabot2, gabot3,gabot4]
     },
     {
       id: 2,
       name: "איפור קבוע לשפתיים",
       description: "החזרת צבע טבעי ותיקון סימטריה",
-      suitableFor: "נשים שאיבדו צבע טבעי מהגיל או הזרקות, חוסר סימטריה בשפתיים",
+      suitableFor: "נשים שאיבדו צבע טבעי מהגיל או הזרקות, חוסר סימטריה בשפתיים.",
       image: sfataim1,
       process: [
-        "בדיקת מצב השפתיים הנוכחי",
-        "בחירת גוון מתאים לגוון העור",
-        "אלחשה מקומית למניעת כאב",
-        "ביצוע האיפור הקבוע",
-        "הוראות טיפול והחלמה"
+        "בדיקת מצב השפתיים הנוכחי.",
+        "בחירת גוון מתאים לגוון העור.",
+        "אלחשה מקומית למניעת כאב.",
+        "ביצוע האיפור הקבוע.",
+        "הוראות טיפול והחלמה."
       ],
       images: [lips1, lips2, lips3]
     },
@@ -68,14 +69,14 @@ const TreatmentsCarousel = () => {
       id: 3,
       name: "טיפול בצלקות ופוסט אקנה",
       description: "טשטוש צלקות בצלקות מאקנה במכשיר RF Fractional",
-      suitableFor: "אנשים עם צלקות מאקנה ונזקי עור מאקנה",
+      suitableFor: "אנשים עם צלקות מאקנה ונזקי עור מאקנה.",
       image: acneMain,
       process: [
-        "הערכת מצב העור והצלקות",
-        "קביעת מספר הטיפולים הנדרש בסדרה",
-        "ביצוע טיפול ב-RF Fractional",
-        "מעקב אחר התקדמות הטיפול",
-        "הוראות טיפול ביתי לשמירת התוצאות"
+        "הערכת מצב העור והצלקות.",
+        "קביעת מספר הטיפולים הנדרש בסדרה.",
+        "ביצוע טיפול ב-RF Fractional.",
+        "מעקב אחר התקדמות הטיפול.",
+        "הוראות טיפול ביתי לשמירת התוצאות."
       ],
       images: [acneMore1, acneMore2, acneMore3]
     },
@@ -83,14 +84,14 @@ const TreatmentsCarousel = () => {
       id: 4,
       name: "טיפול בסימני מתיחה",
       description: "טיפול יעיל בסימני מתיחה בבטן, ירכיים וברכיים",
-      suitableFor: "אנשים עם סימני מתיחה מהריון, שינויים במשקל או צמיחה",
+      suitableFor: "אנשים עם סימני מתיחה מהריון, שינויים במשקל או צמיחה.",
       image: metihaMain,
       process: [
-        "בדיקת מיקום וחומרת סימני המתיחה",
-        "קביעת תוכנית טיפול אישית",
-        "ביצוע טיפולי פרקשינל RF",
-        "מעקב אחר שיפור במרקם העור",
-        "המלצות לטיפול ביתי תומך"
+        "בדיקת מיקום וחומרת סימני המתיחה.",
+        "קביעת תוכנית טיפול אישית.",
+        "ביצוע טיפולי פרקשינל RF.",
+        "מעקב אחר שיפור במרקם העור.",
+        "המלצות לטיפול ביתי תומך."
       ],
       images: [metihaMain]
     },
@@ -98,14 +99,14 @@ const TreatmentsCarousel = () => {
       id: 5,
       name: "מיצוק/ היידהפיישיאל",
       description: "ניקוי עמוק עם לחות מיידית לעור חלק ורך",
-      suitableFor: "נשים בכל הגילאים המחפשות רענון מיידי ולחות לעור",
+      suitableFor: "נשים בכל הגילאים המחפשות רענון מיידי ולחות לעור.",
       image: mitzuk,
       process: [
-        "ניתוח מצב העור וקביעת סוג הטיפול",
-        "ניקוי עמוק עם שאיבת זיהומים",
-        "קילוף עדין ועדכון תאי העור",
-        "הזרקת סרום לחות מותאם",
-        "מריחת הגנה והוראות המשך טיפול"
+        "ניתוח מצב העור וקביעת סוג הטיפול.",
+        "ניקוי עמוק עם שאיבת זיהומים.",
+        "קילוף עדין ועדכון תאי העור.",
+        "הזרקת סרום לחות מותאם.",
+        "מריחת הגנה והוראות המשך טיפול."
       ],
       images: [mitzuk1,mitzuk2,mitzuk3,mitzuk4]
     },
@@ -113,14 +114,14 @@ const TreatmentsCarousel = () => {
       id: 6,
       name: "הסרת סרחי עור",
       description: "הסרה בטוחה ויעילה של סרחי עור וגידולים קטנים",
-      suitableFor: "אנשים עם סרחי עור המפריעים אסתטית או פונקציונלית",
+      suitableFor: "אנשים עם סרחי עור המפריעים אסתטית או פונקציונלית.",
       image: sirheyOr,
       process: [
-        "בדיקה וזיהוי של הסרח",
-        "בחירת השיטה המתאימה להסרה",
-        "ביצוע הטיפול בטכניקה מתקדמת",
-        "טיפול באזור לאחר ההסרה",
-        "מעקב והוראות לריפוי מיטבי"
+        "בדיקה וזיהוי של הסרח.",
+        "בחירת השיטה המתאימה להסרה.",
+        "ביצוע הטיפול בטכניקה מתקדמת.",
+        "טיפול באזור לאחר ההסרה.",
+        "מעקב והוראות לריפוי מיטבי."
       ],
       images: [sirheyOr]
     },
@@ -128,14 +129,14 @@ const TreatmentsCarousel = () => {
       id: 8,
       name: "הסרת כתמי גיל",
       description: "טיפול יעיל בפעולה אחת כולל הקפאה",
-      suitableFor: "אנשים עם כתמי גיל וריכוזי פיגמנטציה",
+      suitableFor: "אנשים עם כתמי גיל וריכוזי פיגמנטציה.",
       image: ktamim,
       process: [
-        "זיהוי וסימון הכתמים לטיפול",
-        "ביצוע טיפול הקפאה ממוקד",
-        "מעקב אחר תהליך ההחלמה",
-        "בדיקת תוצאות והצורך בטיפול נוסף",
-        "הוראות הגנה מקרינה להמשך"
+        "זיהוי וסימון הכתמים לטיפול.",
+        "ביצוע טיפול הקפאה ממוקד.",
+        "מעקב אחר תהליך ההחלמה.",
+        "בדיקת תוצאות והצורך בטיפול נוסף.",
+        "הוראות הגנה מקרינה להמשך."
       ],
       images: [gil,gil1,gil2]
     }
@@ -152,7 +153,13 @@ const TreatmentsCarousel = () => {
     }
   }, []);
 
- 
+  const handleContactClick = (treatmentName) => {
+    const message = `היי אוקסנה, הגעתי דרך הדף שלך, אשמח שנדבר על ${treatmentName}`;
+    const phoneNumber = '972544948282';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setIsAutoScrolling(false);
@@ -247,7 +254,7 @@ const TreatmentsCarousel = () => {
                   </div>
                   <div className={styles.buttons}>
                     <button className={styles.infoButton} onClick={() => openModal(treatment)}>עוד פרטים על הטיפול</button>
-                    <button className={styles.contactButton}>
+                    <button className={styles.contactButton} onClick={() => handleContactClick(treatment.name)}>
                       יצירת קשר
                       <Phone size={16} />
                     </button>
@@ -294,12 +301,7 @@ const TreatmentsCarousel = () => {
               <div className={styles.modalButtons}>
                 <button
                   className={styles.contactModalButton}
-                  onClick={() => {
-                    const message = `היי אוקסנה, הגעתי דרך הדף שלך, אשמח שנדבר על ${selectedTreatment.name}`;
-                    const phoneNumber = '972544948282';
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    window.open(whatsappUrl, '_blank');
-                  }}
+                  onClick={() => handleContactClick(selectedTreatment.name)}
                 >
                   <Phone size={16} />
                   אוקסנה, בואי נתאם טיפול

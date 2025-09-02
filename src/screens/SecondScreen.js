@@ -52,6 +52,7 @@ const ServiceCard = ({ service, index }) => {
                     icon={service.icon} 
                     ref={playerRef} 
                     size="100%" 
+                    colorize='black'
                     onComplete={handleComplete}
                   />
                 </div>

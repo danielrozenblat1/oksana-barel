@@ -23,13 +23,14 @@
     margin: 1% auto;
     direction: rtl;
     width: 95%;
+    color: #333; /* צבע טקסט כהה יותר */
 }
 
 .title {
   font-family: 'Assistant', sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
-  color: #000000;
+  color: #333333; /* צבע טקסט כהה יותר */
   margin: 0;
   position: relative;
   z-index: 2;
@@ -42,7 +43,7 @@
   transform: translate(-50%, -50%);
   font-family: 'Cormorant', serif;
   font-size: 5rem;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(180, 197, 184, 0.65); /* גוון בהיר מהרקע, עם שקיפות */
   z-index: 1;
   white-space: nowrap;
   pointer-events: none;
@@ -78,7 +79,7 @@
   overflow: hidden;
   transition: all 0.2s ease;
   cursor: pointer;
-  background: rgba(52, 62, 57, 0.7);
+  background: rgba(180, 197, 184, 0.7); /* גוון בהיר יותר עם שקיפות */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -117,13 +118,13 @@
   height: 45%;
   background: linear-gradient(
     135deg,
-    rgba(52, 62, 57, 0.85) 0%,
-    rgba(61, 70, 65, 0.9) 50%,
-    rgba(45, 55, 50, 0.85) 100%
-  );
+    rgba(177, 185, 177, 0.85) 0%,
+    rgba(180, 197, 184, 0.9) 50%,
+    rgba(170, 180, 170, 0.85) 100%
+  ); /* גרדיאנט בהיר יותר */
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(240, 240, 240, 0.4); /* גבול בהיר יותר */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -136,17 +137,17 @@
 
 .treatmentName {
   font-family: 'AssistantR', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem; /* גודל טקסט גדול יותר */
   font-weight: 500;
-  color: #ffffff;
+  color: #333333; /* צבע טקסט כהה יותר */
   margin: 0 0 8px 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   line-height: 1.3;
 }
 
 .treatmentDescription {
-  font-size: 0.9rem;
-  color: #ffffff;
+  font-size: 1.0rem; /* גודל טקסט גדול יותר */
+  color: #555555; /* צבע טקסט כהה יותר */
   font-family: "AssistantR", sans-serif;
   margin: 0 0 8px 0;
   font-weight: 400;
@@ -155,8 +156,8 @@
 }
 
 .suitableFor {
-  font-size: 0.8rem;
-  color: #ffffff;
+  font-size: 0.9rem; /* גודל טקסט גדול יותר */
+  color: #666666; /* צבע טקסט כהה יותר */
   font-family: "AssistantR", sans-serif;
   margin: 0 0 16px 0;
   line-height: 1.3;
@@ -184,28 +185,28 @@
   gap: 6px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* גבול כהה יותר */
   font-family: 'AssistantR', sans-serif;
 }
 
 .infoButton {
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background: rgba(240, 240, 240, 0.15); /* רקע בהיר יותר */
+  color: #333333; /* צבע טקסט כהה יותר */
   flex: 1;
 }
 
 .infoButton:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(240, 240, 240, 0.25); /* רקע בהיר יותר */
 }
 
 .contactButton {
-  background: rgba(77, 94, 85, 0.3);
-  color: #ffffff;
+  background: rgba(100, 110, 105, 0.3); /* גוון כהה יותר מהרקע */
+  color: #f5f5f5;
   min-width: fit-content;
 }
 
 .contactButton:hover {
-  background: rgba(77, 94, 85, 0.5);
+  background: rgba(100, 110, 105, 0.5); /* גוון כהה יותר מהרקע */
 }
 
 /* Modal */
@@ -215,7 +216,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(52, 62, 57, 0.9);
+  background: rgba(180, 197, 184, 0.9); /* גוון בהיר יותר עם שקיפות */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,7 +226,7 @@
 }
 
 .modal {
-  background: rgba(45, 55, 50, 0.98);
+  background: rgba(177, 185, 177, 0.98); /* גוון בהיר יותר ואטום */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   width: 100vw;
@@ -242,10 +243,10 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(52, 62, 57, 0.9);
-  color: #ffffff;
+  background: rgba(180, 197, 184, 0.9); /* גוון בהיר יותר עם שקיפות */
+  color: #333333; /* צבע טקסט כהה יותר */
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,25 +264,25 @@
 .modalTitle {
   font-family: 'Assistant', sans-serif;
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #333333; /* צבע טקסט כהה יותר */
   margin-bottom: 30px;
   text-align: center;
   font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .modalSection {
   margin-bottom: 30px;
   padding: 24px;
-  background: rgba(52, 62, 57, 0.6);
+  background: rgba(177, 185, 177, 0.6); /* גוון בהיר יותר עם שקיפות */
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .modalSection h3 {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #333333; /* צבע טקסט כהה יותר */
   margin-bottom: 16px;
   font-weight: 400;
   display: flex;
@@ -290,10 +291,15 @@
   font-family: 'AssistantR', sans-serif;
 }
 
+.modalSection h3 i {
+    color: #000000; /* צבע שחור לאייקון */
+}
+
+
 .modalSection p,
 .modalSection li {
-  font-size: 1rem;
-  color: #ffffff;
+  font-size: 1.1rem; /* גודל טקסט גדול יותר */
+  color: #444444; /* צבע טקסט כהה יותר */
   line-height: 1.6;
   text-align: right;
   opacity: 0.9;
@@ -313,13 +319,13 @@
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   filter: brightness(0.85) contrast(1.1);
 }
 
 .imageGrid img:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   filter: brightness(0.95) contrast(1.15);
 }
 
@@ -338,9 +344,9 @@
   border-radius: 25px;
   font-size: 0.95rem;
   font-weight: 500;
-  background: rgba(77, 94, 85, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
+  background: rgba(100, 110, 105, 0.3); /* גוון כהה יותר מהרקע */
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  color: #f5f5f5;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   display: flex;
@@ -352,8 +358,8 @@
 }
 
 .contactModalButton:hover {
-  background: rgba(77, 94, 85, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(100, 110, 105, 0.5); /* גוון כהה יותר מהרקע */
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */
@@ -367,7 +373,7 @@
     font-size: 1.5rem;
   }
   .description {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* גודל טקסט גדול יותר */
   }
 
   .backgroundTitle {
@@ -380,11 +386,15 @@
   }
 
   .treatmentName {
-    font-size: 1rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.75rem;
+    font-size: 0.85rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 0.85rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -422,7 +432,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -458,7 +468,7 @@
     font-size: 1.7rem;
   }
   .description {
-    font-size: 1.1rem;
+    font-size: 1.25rem; /* גודל טקסט גדול יותר */
   }
   .backgroundTitle {
     font-size: 2.8rem;
@@ -470,11 +480,15 @@
   }
 
   .treatmentName {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 0.9rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -512,7 +526,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.85rem;
+    font-size: 0.95rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -554,7 +568,7 @@
     font-size: 3.2rem;
   }
   .description {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* גודל טקסט גדול יותר */
   }
   .treatmentCard {
     min-width: 240px;
@@ -562,11 +576,15 @@
   }
 
   .treatmentName {
-    font-size: 1.15rem;
+    font-size: 1.25rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.85rem;
+    font-size: 0.95rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 0.95rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -604,7 +622,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.9rem;
+    font-size: 1.0rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -645,7 +663,7 @@
     font-size: 3.5rem;
   }
   .description {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* גודל טקסט גדול יותר */
   }
   .treatmentCard {
     min-width: 260px;
@@ -653,11 +671,15 @@
   }
 
   .treatmentName {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.0rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.0rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -695,7 +717,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.95rem;
+    font-size: 1.05rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -741,14 +763,18 @@
     height: 410px;
   }
   .description {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* גודל טקסט גדול יותר */
   }
   .treatmentName {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.05rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.05rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -786,7 +812,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.97rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -832,11 +858,15 @@
   }
 
   .treatmentName {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.0rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 0.9rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -874,7 +904,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 1rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -928,11 +958,15 @@
   }
 
   .treatmentName {
-    font-size: 1.28rem;
+    font-size: 1.38rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.05rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.05rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -970,7 +1004,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.98rem;
+    font-size: 1.08rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -1016,11 +1050,15 @@
   }
 
   .treatmentName {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -1058,7 +1096,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 0.99rem;
+    font-size: 1.12rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -1104,11 +1142,15 @@
   }
 
   .treatmentName {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -1146,7 +1188,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 1rem;
+    font-size: 1.15rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -1192,11 +1234,15 @@
   }
 
   .treatmentName {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* גודל טקסט גדול יותר */
   }
 
   .treatmentDescription {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
+  }
+
+  .suitableFor {
+    font-size: 1.1rem; /* גודל טקסט גדול יותר */
   }
 
   .infoButton,
@@ -1234,7 +1280,7 @@
 
   .modalSection p,
   .modalSection li {
-    font-size: 1rem;
+    font-size: 1.15rem; /* גודל טקסט גדול יותר */
   }
 
   .imageGrid {
@@ -1259,4 +1305,3 @@
     height: 50px;
   }
 }
-
