@@ -11,6 +11,8 @@ import panim from "../images/אקנה ופוסט אקנה 1.png"
 import hairemove from "../images/לייזר להסרת שיער.png"
 import tzalakot from "../images/צלקות.png"
 
+import syringe from "../icons/wired-outline-428-injection-hover-pinch.json" // ייבא את האייקון החדש
+
 // קומפוננטת כרטיס בודד עם state עצמאי
 const ServiceCard = ({ service, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -108,8 +110,8 @@ const SecondScreen = () => {
         "פודרה רכה וטבעית",
         "איפור קבוע שפתיים",
         "הסרת איפור קבוע בלייזר",
-             "אייליינר",
-                  "קו ריסים",
+        "אייליינר",
+        "קו ריסים",
       ]
     },
     {
@@ -154,6 +156,20 @@ const SecondScreen = () => {
     },
     {
       id: 5,
+      title: "הזרקות", // כרטיס חדש
+      subtitle: "טיפולי הזרקות לשיפור מראה הפנים",
+      icon: syringe, // אייקון מזרק חדש
+      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=300&fit=crop", // תמונה חדשה
+      subServices: [
+        "פיסול פנים",
+        "קו לסת", 
+        "בוטוקס",
+        "מילוי קמטים",
+        "טיפול בורידים ונימים"
+      ]
+    },
+    {
+      id: 6,
       title: "טיפולים מיוחדים",
       subtitle: "שלל טיפולים נוספים",
       icon: skin, // אייקון עור/גילוח לטיפולים מיוחדים
@@ -161,7 +177,6 @@ const SecondScreen = () => {
       subServices: [
         "הסרת כתמי גיל",
         "הסרת סרחי עור",
-     
         "ייעוץ מקצועי ומותאם"
       ]
     }
