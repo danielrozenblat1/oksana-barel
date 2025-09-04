@@ -1,0 +1,161 @@
+.place-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 16px; /* הוספת padding לצדדים */
+}
+
+.place-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place-content:hover {
+  background-color: #f9f9f9;
+  border-color: #d0d0d0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.place-content:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.location-icon svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.place-content:hover .location-icon svg {
+  transform: scale(1.1);
+}
+
+.location-text {
+  flex: 1;
+  text-align: right;
+  direction: rtl;
+  min-width: 0; /* מאפשר לטקסט להתכווץ */
+}
+
+.location-title {
+  font-family: 'AssistantR';
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  word-wrap: break-word; /* מאפשר שבירת מילים ארוכות */
+  overflow-wrap: break-word;
+}
+
+.location-address {
+  font-family: 'AssistantR';
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.8;
+  word-wrap: break-word; /* מאפשר שבירת מילים ארוכות */
+  overflow-wrap: break-word;
+}
+
+/* Responsive Design - טאבלטים קטנים */
+@media (max-width: 600px) {
+  .place-container {
+    max-width: 80%;
+    padding: 0 12px;
+       margin:30px auto
+  }
+  
+  .place-content {
+    padding: 15px;
+    gap: 11px;
+  }
+  
+  .location-title {
+    font-size: 17px;
+  }
+  
+  .location-address {
+    font-size: 13.5px;
+  }
+}
+
+/* Responsive Design - טלפונים */
+@media (max-width: 480px) {
+  .place-container {
+    max-width: 80%;
+    padding: 0 12px;
+       margin:30px auto
+  }
+  .place-content {
+    padding: 14px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  
+  .location-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .location-title {
+    font-size: 16px;
+  }
+  
+  .location-address {
+    font-size: 13px;
+  }
+}
+
+/* Responsive Design - טלפונים קטנים */
+@media (max-width: 360px) {
+  .place-container {
+    padding: 0 6px;
+  }
+  
+  .place-content {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .location-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .location-title {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  
+  .location-address {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+
+/* Responsive Design - מסכים רחבים */
+@media (min-width: 768px) {
+  .place-container {
+    padding: 0 20px;
+  }
+}

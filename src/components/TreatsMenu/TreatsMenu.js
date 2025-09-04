@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, Phone, Users, Stethoscope, Camera } from 'lucide-react';
 import styles from './TreatsMenu.module.css';
 import ipurkavuagabot from "../../images/איפור קבוע לגבות ראשית.png";
@@ -28,11 +28,6 @@ import gil2 from "../../images/כתמי גיל נוספות 2.png"
 
 const TreatmentsCarousel = () => {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
-  const carouselRef = useRef(null);
 
   const treatments = [
     {
@@ -102,11 +97,8 @@ const TreatmentsCarousel = () => {
       suitableFor: "נשים בכל הגילאים המחפשות רענון מיידי ולחות לעור.",
       image: mitzuk,
       process: [
-        "ניתוח מצב העור וקביעת סוג הטיפול.",
-        "ניקוי עמוק עם שאיבת זיהומים.",
-        "קילוף עדין ועדכון תאי העור.",
-        "הזרקת סרום לחות מותאם.",
-        "מריחת הגנה והוראות המשך טיפול."
+        "הליך הטיפול מותאם אישית לכל לקוחה",
+
       ],
       images: [mitzuk1,mitzuk2,mitzuk3,mitzuk4]
     },
@@ -142,68 +134,11 @@ const TreatmentsCarousel = () => {
     }
   ];
 
-  const infiniteTreatments = [...treatments, ...treatments, ...treatments, ...treatments, ...treatments];
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      const cardWidth = 320;
-      const centerPosition = (treatments.length * 2) * cardWidth;
-      carousel.scrollLeft = centerPosition;
-    }
-  }, []);
-
   const handleContactClick = (treatmentName) => {
     const message = `היי אוקסנה, הגעתי דרך הדף שלך, אשמח שנדבר על ${treatmentName}`;
     const phoneNumber = '972544948282';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-  };
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setIsAutoScrolling(false);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-    carouselRef.current.style.scrollBehavior = 'auto';
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    setTimeout(() => {
-      carouselRef.current.style.scrollBehavior = 'smooth';
-      setIsAutoScrolling(true);
-    }, 500);
-  };
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setIsAutoScrolling(false);
-    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-    carouselRef.current.style.scrollBehavior = 'auto';
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    setTimeout(() => {
-      carouselRef.current.style.scrollBehavior = 'smooth';
-      setIsAutoScrolling(true);
-    }, 500);
   };
 
   const getSectionIcon = (title) => {
@@ -213,7 +148,7 @@ const TreatmentsCarousel = () => {
     return null;
   };
 
- const openModal = (treatment) => {
+  const openModal = (treatment) => {
     setSelectedTreatment(treatment);
     // חסימת גלילה ברקע
     document.body.style.overflow = 'hidden';
@@ -230,27 +165,19 @@ const TreatmentsCarousel = () => {
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>הטיפולים שלי</h2>
       </div>
-  <div className={styles.description}>ריכזתי עבורך את כל הטיפולים שיש לקליניקה שלי להציע לך.  הליקי בין הטיפולים ולחצי על כל טיפול כדי לראות עוד פרטים עליו או ליצור איתי קשר ישירות</div>
+      <div className={styles.description}>ריכזתי עבורך את כל הטיפולים שיש לקליניקה שלי להציע לך. הליקי בין הטיפולים ולחצי על כל טיפול כדי לראות עוד פרטים עליו או ליצור איתי קשר ישירות</div>
+      
       <div className={styles.carouselWrapper}>
-        <div
-          className={`${styles.carousel} ${isDragging ? styles.dragging : ''}`}
-          ref={carouselRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {infiniteTreatments.map((treatment, index) => (
-            <div key={`${treatment.id}-${index}`} className={styles.treatmentCard}>
+        <div className={styles.carousel}>
+          {treatments.map((treatment) => (
+            <div key={treatment.id} className={styles.treatmentCard}>
               <div className={styles.imageContainer}>
                 <img src={treatment.image} alt={treatment.name} className={styles.treatmentImage} />
                 <div className={styles.overlay}>
                   <div className={styles.textContent}>
                     <h3 className={styles.treatmentName}>{treatment.name}</h3>
                     <p className={styles.treatmentDescription}>{treatment.description}</p>
+                  
                   </div>
                   <div className={styles.buttons}>
                     <button className={styles.infoButton} onClick={() => openModal(treatment)}>עוד פרטים על הטיפול</button>

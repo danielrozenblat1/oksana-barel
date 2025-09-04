@@ -10,6 +10,7 @@ import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import PrivacyPolicy from './privacy/Privacy';
 import Recs from './components/recommends/Recs';
+import Place from './components/place/Place';
 
 function App() {
   return <>
@@ -22,6 +23,7 @@ function App() {
         <TreatmentsCarousel/>
         <Recs/>
         <ForthScreen/>
+        <Place/>
         <PrivacyPolicy 
   ownerName="אוקסנה בראל" 
   email="Okjamesblond@gmail.com" 
