@@ -14,6 +14,7 @@
   left: 15%;
   right: 15%;
   top: 20px;
+  direction: ltr; /* Changé pour LTR */
   background: linear-gradient(135deg, 
     rgba(140, 160, 150, 0.95) 0%, 
     rgba(150, 170, 160, 0.95) 20%, 
@@ -51,6 +52,7 @@
   padding: 0 30px;
   border-radius: 40px;
   background: transparent;
+  direction: ltr; /* Changé pour LTR */
 }
 
 .logo img {
@@ -69,7 +71,7 @@
   }
 }
 
-/* דגלים */
+/* Drapeaux */
 .flagsContainer {
   display: flex;
   gap: 15px;
@@ -123,14 +125,14 @@
 
 .menuButton {
   background: linear-gradient(145deg, rgba(150, 170, 160, 0.9), rgba(140, 160, 150, 0.9));
-  color: #ffffff; /* שינוי: צבע הטקסט הוא לבן */
+  color: #ffffff;
   font-family: "AssistantR";
   font-size: 1.1rem;
   font-weight: 600;
   padding: 8px 20px;
   cursor: pointer;
   border-radius: 30px;
-  margin-right: 50px;
+  margin-right: 50px; /* חזור לימין כי עכשיו הכפתור בצד שמאל */
   min-width: 160px;
   height: 45px;
   transition: all 0.3s ease;
@@ -148,7 +150,7 @@
 .menuButton:hover {
   transform: translateY(-2px);
   background: linear-gradient(145deg, rgba(160, 180, 170, 0.9), rgba(150, 170, 160, 0.9));
-  color: #ffffff; /* שינוי: צבע הטקסט נשאר לבן גם במעבר עכבר */
+  color: #ffffff;
   box-shadow:
     inset 0 3px 6px rgba(255, 255, 255, 0.6), 
     inset 0 6px 12px rgba(170, 190, 180, 0.4), 
@@ -171,7 +173,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  direction: rtl;
+  direction: ltr; /* Changé de rtl à ltr */
 }
 
 .buttonText {
@@ -183,7 +185,7 @@
     0 0 5px rgba(170, 190, 180, 0.5); 
 }
 
-/* Mobile Menu */
+/* Menu Mobile */
 .mobileMenu {
   position: fixed;
   top: 0;
@@ -199,6 +201,7 @@
   display: flex;
   flex-direction: column;
   animation: revealMenu 0.6s ease forwards;
+  direction: ltr; /* Changé pour LTR */
 }
 
 .mobileMenu.closing {
@@ -225,6 +228,7 @@
   -webkit-backdrop-filter: blur(10px);
   padding: 0 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  direction: ltr; /* Changé pour LTR */
 }
 
 .closeButton {
@@ -262,6 +266,7 @@
   gap: 25px;
   opacity: 1;
   transition: all 0.4s ease;
+  direction: ltr; /* Changé pour LTR */
 }
 
 .mobileMenuItem {
@@ -306,13 +311,14 @@
   }
 }
 
-/* Mobile Menu Flags */
+/* Drapeaux Menu Mobile */
 .mobileFlagsContainer {
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  direction: ltr; /* Changé pour LTR */
 }
 
 .mobileFlagButton {
@@ -354,7 +360,7 @@
   color: #222222;
 }
 
-/* Responsive */
+/* Responsif */
 @media (max-width: 1200px) {
   .navbar {
     width: 80%;

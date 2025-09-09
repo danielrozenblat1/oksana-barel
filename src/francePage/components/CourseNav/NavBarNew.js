@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './NavBarNew.module.css';
-import logo from "../../images/אוקסנה בראל אייקון.png";
+import logo from "../../../images/אוקסנה בראל אייקון.png";
 import { FaTimes } from 'react-icons/fa';
 
 const NavBarNew = () => {
@@ -8,7 +8,7 @@ const NavBarNew = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // פונקציה לגלילה חלקה משלנו
+  // Fonction de défilement fluide personnalisée
   const smoothScrollTo = useCallback((elementId, offset = 0) => {
     const element = document.getElementById(elementId);
     if (element) {
@@ -33,10 +33,10 @@ const NavBarNew = () => {
       timeoutId = setTimeout(() => {
         const scrollPosition = window.scrollY;
         setIsVisible(scrollPosition > 200);
-      }, 10); // דחיית הבדיקה ב-10ms לביצועים טובים יותר
+      }, 10); // Retard de vérification de 10ms pour de meilleures performances
     };
 
-    // הוספת האירוע עם passive: true לביצועים טובים יותר
+    // Ajout de l'événement avec passive: true pour de meilleures performances
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
@@ -61,7 +61,7 @@ const NavBarNew = () => {
 
   const openWhatsApp = () => {
     const phone = '972544948282';
-    const message = 'היי אוקסנה הגעתי מהדף, אשמח לשמוע ממך עוד על';
+    const message = 'Salut Oksana, je viens de votre site, j\'aimerais en savoir plus sur';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -80,9 +80,9 @@ const NavBarNew = () => {
   };
 
   const menuItems = [
-    { name: 'מי אני', id: 'מי אני', offset: -100 },
-    { name: 'מגוון הטיפולים', id: 'מגוון הטיפולים', offset: -100 },
-    { name: 'שאלות נפוצות', id: 'שאלות נפוצות', offset: 0 },
+    { name: 'Qui suis-je', id: 'מי אני', offset: -100 },
+    { name: 'Gamme de traitements', id: 'מגוון הטיפולים', offset: -100 },
+    { name: 'Questions fréquentes', id: 'שאלות נפוצות', offset: 0 },
   ];
 
   return (
@@ -96,19 +96,19 @@ const NavBarNew = () => {
             <img src={logo} alt="Logo" />
           </div>
 
-          {/* דגלים */}
+          {/* Drapeaux */}
           <div className={styles.flagsContainer}>
-            {/* <button className={styles.flagButton} onClick={handleIsraelClick} title="עברית">
+            <button className={styles.flagButton} onClick={handleIsraelClick} title="עברית">
               <div className={styles.flagIcon}>🇮🇱</div>
             </button>
             <button className={styles.flagButton} onClick={handleFranceClick} title="Français">
               <div className={styles.flagIcon}>🇫🇷</div>
-            </button> */}
+            </button>
           </div>
 
           <button className={styles.menuButton} onClick={toggleMenu}>
             <div className={styles.buttonContent}>
-              <span className={styles.buttonText}>לפתיחת התפריט</span>
+              <span className={styles.buttonText}>Ouvrir le menu</span>
             </div>
           </button>
         </div>
@@ -138,23 +138,23 @@ const NavBarNew = () => {
               className={styles.mobileMenuItem}
               onClick={openWhatsApp}
             >
-              יצירת קשר
+              Contact
             </button>
 
-            {/* דגלים במובייל מניו */}
-            {/* <div className={styles.mobileFlagsContainer}>
-              <button className={styles.mobileFlagButton} onClick={handleIsraelClick}>
-                <span className={styles.mobileFlagIcon}>🇮🇱</span>
-                <span className={styles.mobileFlagText}>עברית</span>
-              </button>
+            {/* Drapeaux dans le menu mobile */}
+            <div className={styles.mobileFlagsContainer}>
               <button className={styles.mobileFlagButton} onClick={handleFranceClick}>
                 <span className={styles.mobileFlagIcon}>🇫🇷</span>
                 <span className={styles.mobileFlagText}>Français</span>
               </button>
-            </div> */}
+              <button className={styles.mobileFlagButton} onClick={handleIsraelClick}>
+                <span className={styles.mobileFlagIcon}>🇮🇱</span>
+                <span className={styles.mobileFlagText}>עברית</span>
+              </button>
+            </div>
 
             <div className={styles.center}>
-              <img className={styles.centerLogo} src={logo} alt="אוקסנה בראל לוגו" />
+              <img className={styles.centerLogo} src={logo} alt="Logo Oksana Barel" />
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ const AboutMe = () => {
   }, []);
 
   const handleWhatsAppMessage = () => {
-    const phoneNumber = "972544948282";
+    const phoneNumber = "+972545064300";
     const message = "היי אוקסנה הגעתי מהדף שלך, אשמח לשמוע עוד על";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
