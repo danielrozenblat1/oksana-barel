@@ -136,7 +136,7 @@ const TreatmentsCarousel = () => {
 
   const handleContactClick = (treatmentName) => {
     const message = `היי אוקסנה, הגעתי דרך הדף שלך, אשמח שנדבר על ${treatmentName}`;
-    const phoneNumber = '972544948282';
+    const phoneNumber = '+972545064300';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
