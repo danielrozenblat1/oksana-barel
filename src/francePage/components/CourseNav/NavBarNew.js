@@ -60,7 +60,7 @@ const NavBarNew = () => {
   };
 
   const openWhatsApp = () => {
-    const phone = '972544948282';
+    const phone = '+972545064300';
     const message = 'Salut Oksana, je viens de votre site, j\'aimerais en savoir plus sur';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
