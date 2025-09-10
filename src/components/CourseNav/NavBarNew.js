@@ -98,12 +98,12 @@ const NavBarNew = () => {
 
           {/* דגלים */}
           <div className={styles.flagsContainer}>
-            {/* <button className={styles.flagButton} onClick={handleIsraelClick} title="עברית">
+            <button className={styles.flagButton} onClick={handleIsraelClick} title="עברית">
               <div className={styles.flagIcon}>🇮🇱</div>
             </button>
             <button className={styles.flagButton} onClick={handleFranceClick} title="Français">
               <div className={styles.flagIcon}>🇫🇷</div>
-            </button> */}
+            </button>
           </div>
 
           <button className={styles.menuButton} onClick={toggleMenu}>
@@ -142,7 +142,7 @@ const NavBarNew = () => {
             </button>
 
             {/* דגלים במובייל מניו */}
-            {/* <div className={styles.mobileFlagsContainer}>
+            <div className={styles.mobileFlagsContainer}>
               <button className={styles.mobileFlagButton} onClick={handleIsraelClick}>
                 <span className={styles.mobileFlagIcon}>🇮🇱</span>
                 <span className={styles.mobileFlagText}>עברית</span>
@@ -151,7 +151,7 @@ const NavBarNew = () => {
                 <span className={styles.mobileFlagIcon}>🇫🇷</span>
                 <span className={styles.mobileFlagText}>Français</span>
               </button>
-            </div> */}
+            </div>
 
             <div className={styles.center}>
               <img className={styles.centerLogo} src={logo} alt="אוקסנה בראל לוגו" />

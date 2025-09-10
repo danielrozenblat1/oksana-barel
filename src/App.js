@@ -10,7 +10,7 @@ function App() {
     <Routes>
 
     <Route path="/" index element={<HebrewWrapper/>}/>
-    {/* <Route path="/France" index element={<FranceWrapper/>}/> */}
+    <Route path="/France" index element={<FranceWrapper/>}/>
  </Routes>
  </Router>
   </>
