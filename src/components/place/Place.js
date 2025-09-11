@@ -1,5 +1,5 @@
 import React from 'react';
-import './Place.css';
+import './Placee.css';
 
 const Place = () => {
   const handleLocationClick = () => {
