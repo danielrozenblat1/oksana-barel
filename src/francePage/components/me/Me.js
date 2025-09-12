@@ -46,7 +46,7 @@ const AboutMe = () => {
         </div>
 
         <div className={`${styles.content} ${styles.revealItem}`}>
-          <h2 className={styles.mainTitle}>Enchanté, Oksana Brel</h2>
+          <h2 className={styles.mainTitle}>Enchanté, Oksana Barel</h2>
 
           <div className={styles.quoteContainer}>
             <p className={styles.quote}>
