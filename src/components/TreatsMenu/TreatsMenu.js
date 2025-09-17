@@ -165,7 +165,7 @@ const TreatmentsCarousel = () => {
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>הטיפולים שלי</h2>
       </div>
-      <div className={styles.description}>ריכזתי עבורך את כל הטיפולים שיש לקליניקה שלי להציע לך. הליקי בין הטיפולים ולחצי על כל טיפול כדי לראות עוד פרטים עליו או ליצור איתי קשר ישירות</div>
+      <div className={styles.description}>ריכזתי עבורך את כל הטיפולים שיש לקליניקה שלי להציע לך. לחצי על כל טיפול כדי לראות עוד פרטים עליו או ליצור איתי קשר ישירות</div>
       
       <div className={styles.carouselWrapper}>
         <div className={styles.carousel}>
