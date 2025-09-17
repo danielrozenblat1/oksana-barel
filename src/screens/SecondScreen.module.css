@@ -416,7 +416,7 @@
 .serviceTitle {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #333333; /* כהה יותר, בולט על הרקע הבהיר */
+  color: #020202; /* כהה יותר, בולט על הרקע הבהיר */
   margin: 0 0 8px 0;
   letter-spacing: 0.6px;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* צל קצת יותר בולט */
@@ -424,7 +424,7 @@
 
 .serviceSubtitle {
   font-size: 1.1rem;
-  color: #555555; /* כהה יותר */
+  color: #010101; /* כהה יותר */
   opacity: 0.9; /* שקיפות קצת יותר גבוהה */
   margin: 0;
   font-weight: 300;
